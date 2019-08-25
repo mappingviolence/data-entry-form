@@ -197,6 +197,12 @@ class App extends React.Component {
                     );
                   }}
                 />
+                <Route
+                  path="/logout"
+                  render={() => {
+                    this.logout();
+                  }}
+                />
                 {/* <ProtectedRoute
                   path="/admin"
                   allowedRoles={[ROLES.ADMIN]}
