@@ -38,10 +38,10 @@ EOF
 
     # Env for Development
     # These URLs should NOT have trailing slashes
-    REACT_APP_API_DATA_LOCATION=http://localhost:8000/api/entry
-    REACT_APP_API_SCHEMA_LOCATION=http://localhost:8000/api/schema
-    REACT_APP_API_UI_SCHEMA_LOCATION=http://localhost:8000/api/uischema
-    REACT_APP_API_LOGIN_LOCATION=http://localhost:8000/login
+    REACT_APP_API_DATA_LOCATION=http://localhost:3000/api/entry
+    REACT_APP_API_SCHEMA_LOCATION=http://localhost:3000/api/schema
+    REACT_APP_API_UI_SCHEMA_LOCATION=http://localhost:3000/api/uischema
+    REACT_APP_API_LOGIN_LOCATION=http://localhost:3000/login
 
     if [ -e .env.development ]
     then
