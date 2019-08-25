@@ -5,7 +5,7 @@ function monthAsNumberToString(num) {
         "August", "September", "October",
         "November", "December"
     ];
-    return monthNames[num];
+    return monthNames[num-1];
 }
 
 export default (date) => {
