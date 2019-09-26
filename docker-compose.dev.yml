@@ -22,7 +22,7 @@ services:
     volumes:
       - "${PROJECT_LOCATION}:/usr/app"
     working_dir: /usr/app
-    command: bash -c "npm install && ./node_modules/.bin/nodemon --exec 'node -r dotenv/config' api/server.js dotenv_config_path=${DOTENV_CONFIG_PATH_FOR_API}"
+    command: bash -c "npm install && ./node_modules/.bin/nodemon --legacy-watch --exec 'node -r dotenv/config' api/server.js dotenv_config_path=${DOTENV_CONFIG_PATH_FOR_API}"
     networks:
       map:
         aliases:
