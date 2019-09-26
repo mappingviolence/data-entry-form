@@ -42,7 +42,6 @@ app.use('/login', (req, res) => {
 });
 app.use((req, res, next) => {
     const token = req.cookies && req.cookies['auth-token'];
-console.log(req.cookies, token);
     if (!token) {
         res.set("Content-Type", "application/json");
         return res.status(401).send({
