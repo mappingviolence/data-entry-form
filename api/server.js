@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(bodyparser.json());
 
-const validUserids = ['monica', 'nicole', 'jim', 'felicia', 'cailyn', 'elli', 'bruce', 'patrick']
+const validUserids = ['monica', 'nicole', 'jim', 'felicia', 'cailyn', 'elli', 'bruce', 'patrick', 'nicole_sintetos@brown.edu', 'margaret_goddard@brown.edu', 'edwin_rodriguez@brown.edu', 'claritza_maldonado@brown.edu', 'anni_pullagura@brown.edu', 'andrea_malpica@brown.edu', 'meera_white@brown.edu', 'sharaldine_francisco@brown.edu', 'patrick_kang@brown.edu', 'user01', 'user02', 'user03', 'user04', 'user05', 'user06', 'user07', 'user08', 'user09', 'user10']
 function validateCredentials(token) {
     const [userid, password] = token.split(":");
     return (password === process.env.API_PASSWORD && validUserids.indexOf(userid) >= 0);
