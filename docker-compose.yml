@@ -2,13 +2,13 @@ version: "2.0"
 
 services:
   spa:
-    image: cailyncodes/mappingviolence:spa-1.0.6
+    image: cailyncodes/mappingviolence:spa-1.0.7
     env_file: .env
     networks:
       - map
   
   api:
-    image: cailyncodes/mappingviolence:api-1.0.2
+    image: cailyncodes/mappingviolence:api-1.0.3
     env_file: ./api/.env
     networks:
       - map
