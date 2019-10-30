@@ -18,7 +18,7 @@ then
     # Local env
     if [ -e .env.development.local ]
     then
-        sed -i "/$DO_NOT_EDIT_LINE/Q" .env.development.local
+        sed -i.bak "/$DO_NOT_EDIT_LINE/q" .env.development.local
     else
         touch .env.development.local
         if [ -e .env.development.local.example ]
@@ -45,7 +45,7 @@ EOF
 
     if [ -e .env.development ]
     then
-        sed -i "/$DO_NOT_EDIT_LINE/Q" .env.development
+        sed -i.bak "/$DO_NOT_EDIT_LINE/q" .env.development
     else
         touch .env.development
         if [ -e .env.development.example ]
@@ -67,7 +67,7 @@ else
 # Local env
     if [ -e .env.production.local ]
     then
-        sed -i "/$DO_NOT_EDIT_LINE/Q" .env.production.local
+        sed -i.bak "/$DO_NOT_EDIT_LINE/q" .env.production.local
     else
         touch .env.production.local
         if [ -e .env.production.local.example ]
@@ -94,7 +94,7 @@ EOF
 
     if [ -e .env.production ]
     then
-        sed -i "/$DO_NOT_EDIT_LINE/Q" .env.production
+        sed -i.bak "/$DO_NOT_EDIT_LINE/q" .env.production
     else
         touch .env.production
         if [ -e .env.production.example ]
@@ -114,7 +114,7 @@ fi
 
 if [ -e .env ]
 then
-    sed -i "/$DO_NOT_EDIT_LINE/Q" .env
+    sed -i.bak "/$DO_NOT_EDIT_LINE/q" .env
 else
     touch .env
     if [ -e .env.example ]
